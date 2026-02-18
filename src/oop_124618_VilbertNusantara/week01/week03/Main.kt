@@ -12,4 +12,6 @@ fun main(){
     w.damage = -50
     w.damage = 9999
     println("Tier Weapon: ${w.tier}")
+
+
 }
