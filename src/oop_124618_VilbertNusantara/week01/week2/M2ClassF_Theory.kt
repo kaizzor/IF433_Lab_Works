@@ -1,4 +1,4 @@
-package week2
+package oop_124618_VilbertNusantara.week01.week2
 
 class Pemain{
     var nama: String = "tidak terdaftar";
