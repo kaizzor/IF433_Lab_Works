@@ -13,5 +13,7 @@ fun main(){
     w.damage = 9999
     println("Tier Weapon: ${w.tier}")
 
-
+    val p = Player("Vilbert")
+    p.addXp(50)
+    p.addXp(60)
 }
