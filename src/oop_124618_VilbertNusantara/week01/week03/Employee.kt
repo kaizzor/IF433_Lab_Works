@@ -1,7 +1,8 @@
 package oop_124618_VilbertNusantara.week01.week03
 
 class Employee(val name: String) {
-
+    val tax: Double
+        get() = salary*0.1
     var salary: Int = 0
         set(value) {
             if (value < 0) {
