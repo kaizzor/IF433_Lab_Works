@@ -1,9 +1,9 @@
 package oop_124618_VilbertNusantara.week01.week4
 
-open class Vehicle {
+open class Vehicle(val brand: String) {
     var speed: Int = 0
 
-    open fun accelerate(val brand: String) {
+    open fun accelerate() {
         speed += 10
         println("$brand melaju. Kecepatan: $speed km/jam")
     }
