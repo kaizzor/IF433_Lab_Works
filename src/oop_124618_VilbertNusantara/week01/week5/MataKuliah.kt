@@ -1,4 +1,9 @@
 package oop_124618_VilbertNusantara.week01.week5
 
-class MaraKuliah {
+abstract class MataKuliah {
+    var nama:String = "";
+    abstract fun  set_matkul(sks: Int)
+    fun hasil_matkul(){
+        println("Matkul diminati");
+    }
 }
