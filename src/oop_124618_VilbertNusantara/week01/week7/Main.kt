@@ -26,4 +26,11 @@ fun main() {
 
     val (name, age) = data1
     println("Destructured: $name berumur $age")
+    println("\n=== TEST DATA CLASS ===")
+    val response: ApiResponse = ApiResponse.Success("Data berhasil")
+
+    val uiMessage = when (response) {
+        is ApiResponse.Success -> "Data: ${response.data}"
+        is ApiResponse.Error -> "Error: ${response.message}"
+    }
 }
