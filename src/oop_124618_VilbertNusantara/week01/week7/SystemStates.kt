@@ -1,13 +1,13 @@
-package oop_124618_VilbertNusantara.week01.week7
+package oop_124618_VilbertNusantara.week07
 
 enum class AppState {
     STARTING,
     RUNNING,
-    STOPPED;
+    STOPPED
+}
 
-    sealed class ApiResponse {
-        data class Success(val data: String) : ApiResponse()
-        data class Error(val message: String) : ApiResponse()
-        object Loading : ApiResponse()
-    }
+sealed class ApiResponse {
+    data class Success(val data: String) : ApiResponse()
+    data class Error(val message: String) : ApiResponse()
+    object Loading : ApiResponse()
 }
