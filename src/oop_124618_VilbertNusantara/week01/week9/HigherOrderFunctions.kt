@@ -7,4 +7,13 @@ fun main() {
 
     val evens = numbers.filter { it % 2 == 0 }
     println("Evens only: $evens")
+
+    val multiplied = evens.map { it * 10 }
+    val asStrings = multiplied.map { "Rp $it k" }
+
+    println("Multiplied: $multiplied")
+    println("Formatted: $asStrings")
+
+    val sorted = multiplied.sortedByDescending { it }
+    sorted.forEach { println(it) }
 }
