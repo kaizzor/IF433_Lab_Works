@@ -1,5 +1,9 @@
 package oop_124618_VilbertNusantara.week01.week9
 
+
+//Vilbert Nusantara
+//00000124618
+
 fun main() {
     val tradeHistory = listOf(
         TradeLog("BTCUSDT", "LONG", 20, 15.5, "CLOSED"),
