@@ -14,6 +14,10 @@ fun main() {
     println("Multiplied: $multiplied")
     println("Formatted: $asStrings")
 
+    println("\n=== SORT & FOREACH ===")
     val sorted = multiplied.sortedByDescending { it }
-    sorted.forEach { println(it) }
+
+    sorted.forEach {
+        println("Value: $it")
+    }
 }
