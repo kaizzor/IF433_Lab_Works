@@ -20,7 +20,7 @@ fun main() {
 
     println("Setelah ditambah: $numbers")
 
-    // OBJECT USER UNTUK WITH
+    // APPLY + WITH
     val user = User().apply {
         name = "Alex"
         age = 25
@@ -45,4 +45,19 @@ fun main() {
     }
 
     println(users)
+
+    println("\n=== SMART HOME DASHBOARD ===")
+
+    val homeDevices = mutableListOf<SmartDevice>()
+
+    SmartDevice("", "").apply {
+        name = "Philips WiZ Living Room"
+        category = "Lighting"
+        isOnline = true
+        powerLoad = 12
+    }.also {
+        homeDevices.add(it)
+    }
+
+    println(homeDevices)
 }
