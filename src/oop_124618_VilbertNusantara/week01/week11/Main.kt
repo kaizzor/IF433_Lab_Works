@@ -31,4 +31,18 @@ fun main() {
     with(user) {
         println("User Detail -> Nama: $name, Umur: $age")
     }
+
+    println("\n=== TEST COMBINE APPLY & ALSO ===")
+
+    val users = mutableListOf<User>()
+
+    User().apply {
+        name = "Rifky"
+        age = 20
+    }.also {
+        println("User berhasil dibuat: $it")
+        users.add(it)
+    }
+
+    println(users)
 }
