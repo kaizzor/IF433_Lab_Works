@@ -11,3 +11,4 @@ class FoodEmptyException(
 
 class DispenserJamException :
     FeederException("Wadah dispenser tersangkut/macet!")
+
