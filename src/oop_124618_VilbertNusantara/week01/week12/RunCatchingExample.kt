@@ -8,4 +8,11 @@ fun main() {
 
         "42X".toInt()
     }
+    val safeValue = result.getOrElse { -1 }
+
+    println("Safe Value (getOrElse): $safeValue")
+
+    val recovered = result.recover { 0 }.getOrNull()
+
+    println("Recovered Value: $recovered")
 }
