@@ -65,6 +65,12 @@ fun loadTrades(path: String): List<TradeRecord> {
     }
 }
 
+val loadedData = loadTrades("crypto_trades.csv")
+
+val totalPnl = loadedData.sumOf {
+    it.pnl
+}
+
 fun main() {
 
     val trades = listOf(
