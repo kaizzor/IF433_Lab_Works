@@ -2,6 +2,45 @@ package oop_124618_VilbertNusantara.week01.week14
 
 import java.io.File
 
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class VipPricing : PricingStrategy {
+
+    override fun calculate(price: Double): Double {
+        return price * 0.90
+    }
+}
+
+class RegularPricing : PricingStrategy {
+
+    override fun calculate(price: Double): Double {
+        return price
+    }
+}
+
+class BetterOrderProcessor(
+    private val repo: OrderRepository,
+    private val notifier: NotificationService,
+    private val pricing: PricingStrategy
+) {
+
+    fun processOrder(
+        customerName: String,
+        basePrice: Double
+    ) {
+
+        val finalPrice = pricing.calculate(basePrice)
+
+        repo.saveOrder(customerName, finalPrice)
+
+        notifier.sendNotification(
+            "Pesanan $customerName berhasil diproses"
+        )
+    }
+}
+
 class BadOrderProcessor {
 
     private val file = File("orders.csv")
